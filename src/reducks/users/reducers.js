@@ -5,7 +5,7 @@ export const UserReducer = (state = initialState.users, action) => {
   switch (action.type) {
     case Actions.SIGN_IN:
       return {
-        // 今の状態を保持
+        // state指定することで、initialStateを保持できる。
         ...state,
         ...action.payload
         // isSignedIn: action.payload.isSignedIn,
